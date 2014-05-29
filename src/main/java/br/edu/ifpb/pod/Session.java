@@ -1,13 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package br.edu.ifpb.pod;
 
 import java.io.Serializable;
-import java.sql.Date;
 import java.sql.Time;
 import java.util.Calendar;
 /**
@@ -20,15 +13,12 @@ public class Session implements Serializable{
     public boolean valid;
 
     public Session() {
+        setId(generateId());
+        this.time = null;
+        this.valid = true;
     }
     
-    public Session(Time time, boolean valid) {
-        this.id = this.generateId();
-        this.time = time;
-        this.valid = valid;
-    }
-    
-    private synchronized String generateId(){
+    private String generateId(){
         return Calendar.getInstance().getTime().toString().concat(String.valueOf(Math.random()));
     }
     
