@@ -17,16 +17,26 @@ public class Message implements Serializable{
     private String messageContent;
     private String from;
     private String to;
+    private boolean messageStatus;
+
+    public boolean isMessageStatus() {
+        return messageStatus;
+    }
+
+    public void setMessageStatus(boolean messageStatus) {
+        this.messageStatus = messageStatus;
+    }
 
     public Message(){
         
     }
-    
-    public Message(String id, String messageContent, String from, String to) {
+
+    public Message(String id, String messageContent, String from, String to, boolean messageStatus) {
         this.id = id;
         this.messageContent = messageContent;
         this.from = from;
         this.to = to;
+        this.messageStatus = messageStatus;
     }
 
     public String getId() {
