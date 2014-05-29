@@ -15,7 +15,7 @@ import java.util.ArrayList;
  * @author Fernando
  */
 
-public interface LoginService extends Remote{
+public interface FacadeService extends Remote{
     Session login (String login, String password) throws RemoteException;
     void logout (Session sesion) throws RemoteException;
     Message sendMessage (Session session, Message message) throws RemoteException;
