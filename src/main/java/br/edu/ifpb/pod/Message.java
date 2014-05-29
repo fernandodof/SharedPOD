@@ -17,26 +17,17 @@ public class Message implements Serializable{
     private String messageContent;
     private String from;
     private String to;
-    private boolean messageStatus;
+    private String fId;
 
-    public boolean isMessageStatus() {
-        return messageStatus;
-    }
-
-    public void setMessageStatus(boolean messageStatus) {
-        this.messageStatus = messageStatus;
-    }
-
-    public Message(){
-        
-    }
-
-    public Message(String id, String messageContent, String from, String to, boolean messageStatus) {
+    public Message(String id, String messageContent, String from, String to, String fId) {
         this.id = id;
         this.messageContent = messageContent;
         this.from = from;
         this.to = to;
-        this.messageStatus = messageStatus;
+        this.fId = fId;
+    }
+
+    public Message() {
     }
 
     public String getId() {
@@ -70,5 +61,14 @@ public class Message implements Serializable{
     public void setTo(String to) {
         this.to = to;
     }
-   
+
+    public String getfId() {
+        return fId;
+    }
+
+    public void setfId(String fId) {
+        this.fId = fId;
+    }
+
+    
 }

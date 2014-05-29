@@ -19,5 +19,5 @@ public interface FacadeService extends Remote{
     Session login (String login, String password) throws RemoteException;
     void logout (Session sesion) throws RemoteException;
     Message sendMessage (Session session, Message message) throws RemoteException;
-    boolean publish (ArrayList<Message> messages) throws RemoteException;
+    ArrayList<Message> publish (ArrayList<Message> messages) throws RemoteException;
 }
