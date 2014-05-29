@@ -20,12 +20,9 @@ public class Session implements Serializable{
     public boolean valid;
 
     public Session() {
-    }
-    
-    public Session(Time time, boolean valid) {
         this.id = this.generateId();
-        this.time = time;
-        this.valid = valid;
+        this.valid =true;
+        this.time = null;
     }
     
     private synchronized String generateId(){
