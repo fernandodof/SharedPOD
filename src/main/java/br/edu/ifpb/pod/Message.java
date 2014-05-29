@@ -60,7 +60,5 @@ public class Message implements Serializable{
     public void setTo(String to) {
         this.to = to;
     }
-    
-    
-    
+   
 }
