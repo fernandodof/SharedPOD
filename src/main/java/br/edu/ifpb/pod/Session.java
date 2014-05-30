@@ -18,7 +18,7 @@ public class Session implements Serializable{
         this.valid = true;
     }
     
-    private String generateId(){
+    private synchronized String generateId(){
         return Calendar.getInstance().getTime().toString().concat(String.valueOf(Math.random()));
     }
     
