@@ -3,6 +3,7 @@ package br.edu.ifpb.pod;
 import java.io.Serializable;
 import java.sql.Time;
 import java.util.Calendar;
+import java.util.Objects;
 /**
  *
  * @author Fernando
@@ -45,5 +46,26 @@ public class Session implements Serializable{
     public void setValid(boolean valid) {
         this.valid = valid;
     }
-    
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + Objects.hashCode(this.id);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Session other = (Session) obj;
+        if (!Objects.equals(this.id, other.id)) {
+            return false;
+        }
+        return true;
+    }
 }
